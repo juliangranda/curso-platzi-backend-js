@@ -3,5 +3,11 @@ pwd: ver ubicacion o url para utilizarla desde el navegador
 console.group() - nos permite agrupar los console.log() en grupo para ser mas ordenados al momento de mostrarlos
 console.groupend() - nos permite cerrar la agrupacion de los console.log() para evitar mezclarlos con otros console.group() este es obligario siempre cerrarlo
 
-
+imprimir en consola las variables como si fuera un objeto
+console.log({
+    precioOriginal,
+    descuento,
+    porcentajePrecioConDescuento,
+    precioConDescuento
+});
 

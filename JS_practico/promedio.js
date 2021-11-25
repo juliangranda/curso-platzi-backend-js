@@ -1,13 +1,25 @@
-const lista = [
+/*  const lista = [
     100,
     200,
     300,
     500
-];
+]; */
+ 
+let lista = [];
 
 
+function añadirDato(){
+ 
+  const inputList = document.getElementById("InputDato")
+  const list = inputList.valueAsNumber; 
+  lista.push(list);
+  const resultadoLista = document.getElementById("resultadoLista");
+  resultadoLista.innerText = "los datos de la lista son: " + lista;
+  return lista;
+}
 
-function calcularMediaAritmetica(lista){
+
+function calcularMediaAritmetica(/*lista*/){
 /*     let sumaLista = 0;
     for(let i = 0; i < lista.length; i++){
         sumaLista = sumaLista + lista[i];
@@ -31,7 +43,12 @@ function calcularMediaAritmetica(lista){
       console.log(array1.reduce(reducer)); */
 
     const promedioLista = sumaLista / lista.length;
+    console.log(promedioLista);
+    const resultadoPromedio = document.getElementById("ResultP");
+    resultadoPromedio.innerText ="el promedio de la lista es: " + promedioLista;
     return promedioLista;
 
     //calcularMediaAritmetica([1,14,151,98]);
 }
+
+

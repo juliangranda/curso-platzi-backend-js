@@ -17,6 +17,8 @@ console.log({
     //reducer: se utiliza para por medio de un argumento de una funcion(callback) este puede recorrer todos los
     //elementos del array e irlos sumando uno por uno para asi reducir el array
 
+    nota importante : el proceso a aplicar no es solo la suma, puede ser multiplicar,restar,dividir,etc o cualquier otro conjunto de instrucciones
+
     const sumaLista = lista.reduce(
         function (valorAcumulado = 0, nuevoElemento) {
           return valorAcumulado + nuevoElemento;

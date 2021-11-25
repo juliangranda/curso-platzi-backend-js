@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorro/Deuda</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Capacidad de ahorro y endeudamiento
+        </h1>
+    </header>
+
+
+    <section>
+        <h2>Datos requeridos</h2>
+
+        <form action="">
+            <label for="InputHogar">Hogar</label>
+            <input id="InputHogar" type="number">
+            <br>
+            <label for="InputServicios">Servicios publicos</label>
+            <input id="InputServicios" type="number">
+            <br>
+            <label for="InputHComida">Comida</label>
+            <input id="InputComida" type="number">
+            <br>
+            <label for="InputTransporte">Transporte</label>
+            <input id="InputTransporte" type="number">
+            <br>
+            <label for="InputOcio">Ocio</label>
+            <input id="InputOcio" type="number">
+            <br>
+            <label for="InputOtros">Otros</label>
+            <input id="InputOtros" type="number">
+
+        </form>
+
+        <form action="">
+            <br>
+            <label for="InputIngresos">Ingreso mensual</label>
+            <input id="InputIngreso" type="number">
+            <br>
+            <button type="button" onclick="ingreso_deuda()">Calcular Gastos</button>
+            <br>
+            <p id="ResultP"></p>
+        </form>
+    </section>
+
+    <script src="./ahorro_deuda.js"></script>
+</body>
+</html>

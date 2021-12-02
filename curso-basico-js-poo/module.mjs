@@ -2,7 +2,7 @@
     ojo: solo se puede usar los archivo que tenga "export" en el codigo del archivo que se esta importando
 */
 
-import { PlatziClass } from "./main.mjs";
+import { PlatziClass } from "./main.js";
 
 const clase67 = new PlatziClass({
     name: "javascript: orientada a objetos, basados en prototipos",

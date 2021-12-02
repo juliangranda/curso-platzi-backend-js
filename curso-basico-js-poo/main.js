@@ -1,3 +1,25 @@
+class Comment{
+  constructor({
+    content,
+    studentName,
+    studentRole = "estudiante",
+  }){
+    this.content = content;
+    this.studentName = studentName;
+    this.studentRole = studentRole;
+    //podemos añadir nuevos atributos
+    this.likes = 0;
+  }
+
+  publicar(){
+    console.log(this.studentName + "(" + this.studentRole + ")");
+    console.log(this.likes + " likes");
+    console.log(this.content);
+    
+  }
+}
+
+
 function videoPlay(id){
   const urlSecreta = "https://platziultrasecreto.com/" + id;
   console.log("se esta reproduciendo desde la url "+ urlSecreta);
@@ -130,6 +152,16 @@ class Student {
     this.approvedCourses = approvedCourses;
     this.learningPaths = learningPaths;
   }
+
+  publicarComentario(commentContent){
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name,
+
+    });
+    comment.publicar();
+  }
+  
 }
 
 
@@ -159,7 +191,7 @@ class BasicStudent extends Student{
     }
   }
 }
-class ExpertStudent extends Student{
+class TeacherStudent extends Student{
   constructor(props){   
     super(props);
     
@@ -167,7 +199,21 @@ class ExpertStudent extends Student{
   approvedCourse(newCourse){
       this.approvedCourses.push(newCourse);
   }
+
+  //poliformismo
+  publicarComentario(commentContent){
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name,
+      studentRole: "profesor",
+
+    });
+    comment.publicar();
+  }
+
+
 }
+
 
 const juan2 = new FreeStudent({
   name: "JuanDC",
@@ -190,3 +236,16 @@ const miguelito2 = new BasicStudent({
     escuelaData,
   ],
 });
+
+
+const fredy = new TeacherStudent({
+  name: "fredy Vega",
+  username: "freddier",
+  email: "fredy@juanito.com",
+  instagram: "fredy_serio",
+
+});
+
+//polimorfismo
+fredy.publicarComentario("excelente");
+miguelito2.publicarComentario("me gusto , pero no tanto")

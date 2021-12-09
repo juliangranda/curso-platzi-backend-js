@@ -15,6 +15,7 @@ newFunction2('ricardo', '23', 'CO');
 
 
 //concatenacion
+//es5
 let hello = "Hello";
 let world = "World";
 let epicPhrase = hello + ' ' + world;
@@ -27,7 +28,7 @@ console.log(epicPhrase2);
 
 //concatenacion multilinea
 
-//antes
+//es5
 let lorem = "esta es simplemente una frase cualquiera para ...." 
 + "otra frase para demostrar que es multilinea"
 
@@ -86,3 +87,64 @@ console.log(globalLet);
 
 //la constante es inmutable , por ende , nunca cambiara
 const a = 'b';
+
+
+
+
+//propiedad de objetos mejorada
+let name = 'julian';
+let age = 26;
+
+//es5
+obj = {name: name, age: age};
+
+//es6
+obj2 = {name, age};
+console.log(obj2);
+
+
+
+//arrow function = FUNCION ANONIMA
+
+const names = [
+    {name: 'julian', age = 26},
+    {name: 'oscar', age = 32}
+];
+//es5
+let listOfNames = names.map(function(item){
+    console.log(item.name);
+});
+//es6
+let listOfNames2 = names.map(item => console.log(item.name));
+
+const listOfNames3 = (name, age, country) => {
+    //codigo
+}
+
+const listOfNames4 = (name) => {
+    //codigo
+}
+
+const square = num => num * num;
+
+
+
+//promesas - asincronismo  -- estas son algo que va a pasar
+
+const hellopromise = () => {
+    return new Promise((resolve, reject) => {
+        if(true){
+            resolve('hey!');
+        }else{
+            reject('ups');
+        }
+    });
+}
+//then - response es afirmativo
+//catch - catch es error
+hellopromise()
+    .then(response => console.log(response))
+    .then(() => console.log('hello'))
+    .catch(error => console.log(error));
+
+

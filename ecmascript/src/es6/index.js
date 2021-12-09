@@ -148,3 +148,48 @@ hellopromise()
     .catch(error => console.log(error));
 
 
+
+
+
+
+//clases
+
+class calculator{
+    constructor(){
+        this.valueA = 0;
+        this.valueB = 0;
+    }
+    sum(valueA, valueB){
+        this.valueA = valueA;
+        this.valueB = valueB;
+        return this.valueA + this.valueB;
+    }
+}
+
+const calc = new calculator();
+console.log(calc.sum(2,2));
+
+
+
+/* //modulos
+import { hello, bye as chao } from './module.mjs';
+console.log(hello());
+console.log(chao); */
+
+
+
+
+//generators
+//EL * dice que esto es un generator
+function* helloWorld(){
+    if(true){
+        yield 'hello, ';
+    }
+    if(true){
+        yield 'world';
+    }
+
+};
+
+const generatorHello = helloWorld();
+console.log(generatorHello.next().value);

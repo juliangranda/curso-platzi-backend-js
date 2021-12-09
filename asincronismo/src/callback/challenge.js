@@ -34,7 +34,7 @@ fetchData(API, function(error1, data1){
             if(error3) return console.log(error3);
             console.log(data1.info.count);
             console.log(data2.name);
-            console.log(data3.dimesion);
+            console.log(data3.dimension);
         });
     })
 })

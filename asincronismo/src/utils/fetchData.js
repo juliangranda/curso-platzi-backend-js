@@ -1,6 +1,6 @@
 
 let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-let API = 'https://rickandmortyapi.com/api/character/';
+const API = 'https://rickandmortyapi.com/api/character/';
 
 
 const fetchData = (url_api, callback) => {
@@ -11,7 +11,7 @@ const fetchData = (url_api, callback) => {
             if(xhttp.readyState === 4){
 
                 (xhttp.status === 200)
-                    ? resolve(JSON.parse(xttp.responseText))
+                    ? resolve(JSON.parse(xhttp.responseText))
                     : reject(new Error('error', url_api))
             }
         })

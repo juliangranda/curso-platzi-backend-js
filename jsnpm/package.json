@@ -14,7 +14,9 @@
   "author": "juliangranda",
   "license": "MIT",
   "dependencies": {
-    "moment": "^2.29.1"
+    "json-server": "^0.15.0",
+    "moment": "^2.29.1",
+    "webpack": "^5.65.0"
   },
   "devDependencies": {
     "date-fns": "^2.27.0"

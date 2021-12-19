@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectores combinadores</title>
+    <style>
+    /*un parrafo que esta dentro de un div*/
+        div p {
+            color: lime;
+        }
+    /*un div que esta dentro de otro div*/
+        div > div {
+            background: plum;
+        }
+
+        .es {
+            background: red;
+        }
+        div + section{
+            background: palevioletred;
+        }
+        /*todos los parrafos que esta justamente despues del div*/
+        div ~ p{
+            color: powderblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <p>platzi</p>
+            <div class = "es">Es</div>
+        </div>
+    </div>
+    <p>clase selectores</p>
+    <section>
+        es lo mejor
+    </section>
+    <div>
+        Master
+    </div>
+
+</body>
+</html>
